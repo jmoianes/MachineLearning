@@ -47,3 +47,31 @@ def score(X_test, y_test, classifier):
     print('Accuracy: {0}'.format(classifier.score(X_test, y_test)))
     y_pred = classifier.predict(X_test)
     print('Number of mislabeled points: {0}'.format((y_test!=y_pred).sum()))
+
+def plot_scaling(x, y, scalers=None, max_plots_columns=3):
+    if scalers is None:
+        print 'There are no scalers to plot'
+        pass
+    
+    i = 0
+    total_plots = len(scalers)+1
+    if total_plots < max_plot_columns:
+        columns = total_plots
+        rows = 1
+    else:
+        columns = max_plot_columns
+        rows = total_plots % max_plot_columns
+    
+    fig, axes = plt.subplots(rows, columns, figsize=(13, 4))
+    
+    # original
+    axes[i].scatter(x, y, c='b', label='original', s=60)
+    i += 1
+    
+    # scaling
+    for scaler in scalers:
+        scaler.fit(x)
+        x_scaled = scaler.transform(x)
+        scaler.fit(y)
+        y_scaled = scaler.transform(y)
+        axes[i] = scatter(x_scaled, y_scaled, c='b', label='original', s=60)
