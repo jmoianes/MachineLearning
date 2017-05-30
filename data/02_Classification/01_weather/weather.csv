@@ -1,11 +1,3 @@
-weather,car,class
-sunny,working,go-out
-rainy,broken,go-out
-sunny,working,go-out
-sunny,working,go-out
-sunny,working,go-out
-rainy,broken,stay-home
-rainy,broken,stay-home
-sunny,working,stay-home
-sunny,broken,stay-home
-rainy,broken,stay-home
+version https://git-lfs.github.com/spec/v1
+oid sha256:e11337595bff59ad90fbf82a4d34c16becfcb06fa51e025db05829c9d0fecaf8
+size 238
