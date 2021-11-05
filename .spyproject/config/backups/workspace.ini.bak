@@ -4,7 +4,7 @@ save_data_on_exit = True
 save_history = True
 save_non_project_files = False
 project_type = 'empty-project-type'
-recent_files = ['00 Data Preparation\\code\\01_missing_data.py', 'tools\\pandas\\comparison _with_sql.py']
+recent_files = ['00 Data Preparation\\code\\01_missing_data.py']
 
 [main]
 version = 0.2.0
